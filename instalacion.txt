@@ -1,0 +1,10 @@
+git add .
+git commit -m "Descripción de los cambios realizados agregando paginas 11 ACTUALIZADO"
+git push
+
+BANCOCANCIONES/
+-image/
+    -artista/
+-index.html
+-artista.html
+-songs.js

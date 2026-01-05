@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Artistas - Acordes y Letras</title>
+    <link rel="icon" type="image/x-icon" href="image/logo.jpg" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #121212 0%, #1a1a1a 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 30px;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #1db954, #1ed760);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #b3b3b3;
+            font-size: 1.1em;
+        }
+
+        .stats {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #181818;
+            border-radius: 8px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #1db954;
+        }
+
+        .stat-label {
+            color: #b3b3b3;
+            font-size: 0.9em;
+        }
+
+        .search-bar {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 15px 20px;
+            background: #282828;
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            background: #333;
+            box-shadow: 0 0 0 2px #1db954;
+        }
+
+        .search-bar input::placeholder {
+            color: #b3b3b3;
+        }
+
+        .artists-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .artist-card {
+            background: #181818;
+            border-radius: 10px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 0;
+        }
+
+        .artist-card > div {
+            text-align: center;
+        }
+
+        .artist-card:hover {
+            background: #282828;
+            border-color: #1db954;
+            transform: translateY(-4px);
+        }
+
+        .artist-cover {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            margin-bottom: 12px;
+        }
+
+        .artist-name {
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        .artist-songs-count {
+            font-size: 0.9em;
+            color: #b3b3b3;
+        }
+
+        @media (max-width: 992px) {
+            .artists-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .artists-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .artist-card {
+                flex-direction: row;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .artist-cover {
+                width: 70px;
+                height: 70px;
+                margin-bottom: 0;
+            }
+
+            .artist-name {
+                text-align: left;
+            }
+
+            .artist-songs-count {
+                text-align: left;
+            }
+
+            .contact-btn {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #1db954, #1ed760);
+            color: #000;
+            font-weight: 600;
+            font-size: 0.95em;
+            text-decoration: none;
+            box-shadow: 0 0 0 0 rgba(29, 185, 84, 0.7);
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+            animation: contact-pulse 1.8s infinite;
+            white-space: nowrap;
+            border: none;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+            background: linear-gradient(90deg, #1ed760, #1db954);
+        }
+
+        .contact-note {
+            font-size: 0.75em;
+            color: #111;
+            opacity: 0.8;
+            margin-top: 2px;
+        }
+
+        @keyframes contact-pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(29, 185, 84, 0.6);
+            }
+            50% {
+                transform: scale(1.04);
+                box-shadow: 0 0 0 8px rgba(29, 185, 84, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(29, 185, 84, 0);
+            }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s;
+        }
+
+        .modal-content {
+            background: linear-gradient(180deg, #1a1a1a 0%, #121212 100%);
+            margin: 5% auto;
+            padding: 30px;
+            border: 1px solid #333;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            animation: slideDown 0.4s;
+        }
+
+        .close {
+            color: #b3b3b3;
+            float: right;
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 20px;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #1db954;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #b3b3b3;
+            font-size: 0.95em;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: #282828;
+            border: 2px solid #333;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1em;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1db954;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(90deg, #1db954, #1ed760);
+            color: #000;
+            font-weight: 600;
+            font-size: 1em;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(29, 185, 84, 0.4);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .form-status {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.95em;
+            display: none;
+        }
+
+        .form-status.success {
+            background: rgba(29, 185, 84, 0.2);
+            border: 1px solid #1db954;
+            color: #1ed760;
+            display: block;
+        }
+
+        .form-status.error {
+            background: rgba(255, 59, 48, 0.2);
+            border: 1px solid #ff3b30;
+            color: #ff6b6b;
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from { 
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+                <div>
+                    <h1>EL String</h1>
+                    <p class="subtitle">Acordes y letras por artista</p>
+                </div>
+
+                <button
+                    type="button"
+                    class="contact-btn"
+                    onclick="openContactModal()"
+                    aria-label="Abrir formulario de contacto"
+                >
+                    Contácteme
+                    <span class="contact-note">Envíame tus recomendaciones</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number" id="totalArtists">0</div>
+                <div class="stat-label">Artistas</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="totalSongs">0</div>
+                <div class="stat-label">Canciones</div>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <input
+                type="text"
+                id="searchArtistInput"
+                placeholder="Buscar artista..."
+            />
+        </div>
+
+        <div class="artists-grid" id="artistsGrid"></div>
+
+        <!-- Modal de Contacto -->
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeContactModal()">&times;</span>
+                <h2 style="margin-bottom: 20px;">Envíame tu recomendación</h2>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Tu nombre</label>
+                        <input type="text" name="name" id="userName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Tu correo</label>
+                        <input type="email" name="email" id="userEmail" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Mensaje / Recomendación</label>
+                        <textarea name="message" id="userMessage" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">Enviar</button>
+                    
+                    <div id="formStatus" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- canciones compartidas -->
+    <script src="songs.js"></script>
+
+    <script>
+        // Portadas por artista
+        const artistCovers = {
+            "Marcos Witt": "image/artistas/Marcos witt.jfif",
+            "Hillsong": "image/artistas/hillsong.jfif",
+            "Elevation Worship": "image/artistas/Elevation Worship.jfif",
+            "Bethel": "image/artistas/bethel.jpeg",
+            "IBI": "image/artistas/IBI.avif",
+            "Jonathan & Sarah Jerez": "image/artistas/Jonathan & Sarah Jerez.jpg",
+            "Eccos": "image/artistas/ECCOS.webp",
+            "Rojo": "image/artistas/rojo.jpg",
+            "Danilo Montero": "image/artistas/danielo.jfif",
+            "Nezareth": "image/artistas/nezareth.jfif",
+            "Un corazon": "image/artistas/un corazon.webp",
+            "Puerto Seguro": "image/artistas/puerto seguro.jpg",
+            "Christine D'Clario": "image/artistas/Christine D'Clario.jfif",
+            "Evan Craft": "image/artistas/Evan Craft.jfif",
+            "Phil Wickham": "image/artistas/Phil Wickham.jfif",
+            "Sonido Cristiano": "image/19.jpg",
+            "Marcos Vidal": "image/artistas/marcos vidal.jpg",
+            "Jesus Adrian Romero": "image/artistas/jesus adrian.jfif",
+            "Jaime Murrell": "image/artistas/jaime murrell.jfif",
+            "Rabito": "image/artistas/rabito.jfif",
+            "Marcos Barrientos": "image/artistas/marcos barrientos.avif",
+            "Alex Campos": "image/artistas/alex campos.jpg",
+            "Lily Goodman": "image/artistas/lily goodman.avif",
+            "Barak": "image/artistas/barak.jfif",
+            "Miel San marcos": "image/artistas/miel san marcos.jpg",
+            "Marcela Gándara": "image/artistas/marcela gandara.webp",
+            "Juan Carlos Alvarado": "image/artistas/juan carlos alvarado.jpg",
+            "Coalo Zamorano": "image/artistas/coalo zamorano.jfif",
+            "Santiago Benavides": "image/artistas/santiago.jfif",
+            "Montesanto": "image/artistas/montesanto.jpg",
+            "Gerry Marquez": "image/artistas/gerry marquez.jpg",
+            "Emir Sensini": "image/artistas/emir.avif",
+            "Samuel Hernandez": "image/artistas/samuel hernandez.jfif",
+            "Roberto Orellana": "image/artistas/roberto orellana.jpg",
+            "Abel Zabala": "image/artistas/abel zabala.avif"
+        };
+
+        function groupByArtist(songsArray) {
+            const map = new Map();
+            songsArray.forEach(song => {
+                const artistName = song.artist;
+                if (!map.has(artistName)) {
+                    map.set(artistName, []);
+                }
+                map.get(artistName).push(song);
+            });
+            return map;
+        }
+
+        const artistsMap = groupByArtist(songs);
+        let filteredArtists = Array.from(artistsMap.keys());
+
+        function getArtistCover(artistName) {
+            return artistCovers[artistName] || "image/default.jpg";
+        }
+
+        function renderArtists(artistsToRender) {
+            const grid = document.getElementById("artistsGrid");
+            grid.innerHTML = "";
+
+            let notFoundMsg = document.getElementById("artistNotFoundMsg");
+            if (!notFoundMsg) {
+                notFoundMsg = document.createElement("p");
+                notFoundMsg.id = "artistNotFoundMsg";
+                notFoundMsg.style.color = "#b3b3b3";
+                notFoundMsg.style.marginTop = "10px";
+                notFoundMsg.style.fontSize = "0.95em";
+                grid.parentNode.insertBefore(notFoundMsg, grid.nextSibling);
+            }
+
+            if (artistsToRender.length === 0) {
+                notFoundMsg.textContent = "Artista no encontrado";
+            } else {
+                notFoundMsg.textContent = "";
+            }
+
+            artistsToRender.forEach(artistName => {
+                const songsOfArtist = artistsMap.get(artistName) || [];
+                const cover = getArtistCover(artistName);
+
+                const card = document.createElement("div");
+                card.className = "artist-card";
+
+                card.addEventListener("click", () => {
+                    sessionStorage.setItem("indexScrollPos", window.scrollY.toString());
+                    sessionStorage.setItem("lastArtist", artistName);
+                    openArtist(artistName);
+                });
+
+                card.innerHTML = `
+                    ${
+                        cover
+                            ? `<img src="${cover}" alt="${artistName}" class="artist-cover" />`
+                            : `<div class="artist-cover" style="background:#333;"></div>`
+                    }
+                    <div>
+                        <div class="artist-name">${artistName}</div>
+                        <div class="artist-songs-count">${songsOfArtist.length} canciones</div>
+                    </div>
+                `;
+
+                grid.appendChild(card);
+            });
+        }
+
+        function openArtist(artistName) {
+            const encoded = encodeURIComponent(artistName);
+            window.location.href = `artista.html?name=${encoded}`;
+        }
+
+        function updateStats() {
+            document.getElementById("totalSongs").textContent = songs.length;
+            document.getElementById("totalArtists").textContent = artistsMap.size;
+        }
+
+        document.getElementById("searchArtistInput").addEventListener("input", (e) => {
+            const term = e.target.value.toLowerCase();
+            filteredArtists = Array.from(artistsMap.keys()).filter(name =>
+                name.toLowerCase().includes(term)
+            );
+            renderArtists(filteredArtists);
+        });
+
+        window.addEventListener("load", () => {
+            updateStats();
+            renderArtists(filteredArtists);
+
+            const savedPos = sessionStorage.getItem("indexScrollPos");
+            if (savedPos) {
+                setTimeout(() => {
+                    window.scrollTo(0, parseInt(savedPos, 10) || 0);
+                }, 100);
+            }
+        });
+
+        // ===== FORMULARIO DE CONTACTO CON WEB3FORMS =====
+        
+        function openContactModal() {
+            document.getElementById('contactModal').style.display = 'block';
+        }
+
+        function closeContactModal() {
+            document.getElementById('contactModal').style.display = 'none';
+            document.getElementById('contactForm').reset();
+            document.getElementById('formStatus').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target == modal) {
+                closeContactModal();
+            }
+        }
+
+        // ⚠️ REEMPLAZA 'TU_ACCESS_KEY_AQUI' con tu Access Key de Web3Forms
+        const ACCESS_KEY = "59cbf0e1-dd46-4481-b001-2efd2a06744d";
+
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const formStatus = document.getElementById('formStatus');
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+            formStatus.style.display = 'none';
+            
+            const formData = new FormData();
+            formData.append('access_key', ACCESS_KEY);
+            formData.append('subject', 'Nueva recomendación - EL String');
+            formData.append('name', document.getElementById('userName').value);
+            formData.append('email', document.getElementById('userEmail').value);
+            formData.append('message', document.getElementById('userMessage').value);
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    formStatus.className = 'form-status success';
+                    formStatus.textContent = '¡Mensaje enviado con éxito! Gracias por tu recomendación.';
+                    formStatus.style.display = 'block';
+                    document.getElementById('contactForm').reset();
+                    
+                    setTimeout(() => {
+                        closeContactModal();
+                    }, 3000);
+                } else {
+                    throw new Error('Error en el envío');
+                }
+            } catch (error) {
+                formStatus.className = 'form-status error';
+                formStatus.textContent = 'Error al enviar. Por favor intenta de nuevo.';
+                formStatus.style.display = 'block';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Enviar';
+            }
+        });
+
+        // Deshabilitar clic derecho
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Deshabilitar teclas como F12, Ctrl+U (Ver código fuente), Ctrl+Shift+I
+        document.onkeydown = function(e) {
+            if(event.keyCode == 123) {
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                return false;
+            }
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

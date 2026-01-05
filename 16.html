@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dios Imparable - Acordes</title>
+    <link rel="icon" type="image/x-icon" href="image\logo.jpg" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            -webkit-touch-callout: none;   /* iOS Safari */
+            -webkit-user-select: none;     /* Chrome/Safari/Opera */
+            -khtml-user-select: none;      /* Navegadores antiguos */
+            -moz-user-select: none;        /* Firefox */
+            -ms-user-select: none;         /* IE/Edge */
+            user-select: none;             /* Estándar */
+        }
+
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #121212 0%, #1a1a1a 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding-bottom: 50px;
+        }
+
+        .header {
+            background: #181818;
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .back-btn {
+            background: #282828;
+            border: none;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+
+        .song-header-info {
+            flex: 1;
+        }
+
+        .song-title-header {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .song-artist-header {
+            color: #b3b3b3;
+            font-size: 0.9em;
+        }
+
+        .controls {
+            background: #282828;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .control-label {
+            color: #b3b3b3;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .btn-control {
+            background: #1db954;
+            border: none;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 0.95em;
+        }
+
+        .btn-control:hover {
+            background: #1ed760;
+            transform: translateY(-2px);
+        }
+
+        .btn-control.secondary {
+            background: #404040;
+            color: #fff;
+        }
+
+        .btn-control.secondary:hover {
+            background: #505050;
+        }
+
+        .transpose-controls {
+            display: flex;
+            gap: 5px;
+        }
+
+        .transpose-controls button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #404040;
+            border: none;
+            color: #fff;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .transpose-controls button:hover {
+            background: #1db954;
+            color: #000;
+        }
+
+        .current-key {
+            background: #1db954;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+
+        .song-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .lyrics-section {
+            background: #181818;
+            padding: 40px;
+            border-radius: 12px;
+            line-height: 2;
+            font-size: 1.1em;
+        }
+
+        .section-title {
+            color: #1db954;
+            font-weight: 700;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .lyrics-line {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .chord {
+            color: #1db954;
+            font-weight: 700;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            display: inline-block; 
+            margin-right: 5px;
+            position: relative;
+            top: 0;
+        }
+
+        .chord-line {
+            display: flex; 
+            color: #1db954;
+            font-weight: 700;
+            font-family: 'Courier New', monospace;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+
+        .lyric-text {
+            color: #e0e0e0;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .spacer {
+            height: 15px;
+        }
+
+        .verse-label {
+            color: #1db954;
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .verse-label-1{
+            color: #1db954;
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .ponte-section {
+            background: #282828;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #1db954;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #b3b3b3;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .song-title {
+                font-size: 1.8em;
+            }
+
+            .lyrics-section {
+                padding: 25px 20px;
+                font-size: 1em;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .control-group {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <button class="back-btn" onclick="goBack()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <div class="song-header-info">
+                <div class="song-title-header">Dios Imparable</div>
+                <div class="song-artist-header">Marcos Witt</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <div class="control-group">
+            <span class="control-label">Tonalidad:</span>
+            <div class="current-key" id="currentKey">A</div>
+        </div>
+        <div class="control-group">
+            <span class="control-label">Transponer:</span>
+            <div class="transpose-controls">
+                <button onclick="transpose(-1)" title="Bajar medio tono">−</button>
+                <button onclick="transpose(1)" title="Subir medio tono">+</button>
+            </div>
+        </div>
+        <button class="btn-control secondary" onclick="resetKey()">Reset</button>
+        <button class="btn-control" onclick="toggleChords()">
+            <span id="chordsToggleText">Ocultar Acordes</span>
+        </button>
+        <button class="btn-control" onclick="increaseFontSize()">A+</button>
+        <button class="btn-control" onclick="decreaseFontSize()">A−</button>
+    </div>
+
+    <div class="song-container">
+    
+        <div class="lyrics-section" id="lyricsSection">
+            <span class="verse-label-1">Intro</span>
+            
+            <div class="lyrics-line">
+                <div class="chord-line">
+                    <span style="margin-left: 0px" class="chord">A/C#</span>
+                    <span style="margin-left: 10px" class="chord">D</span>
+                    <span style="margin-left: 10px" class="chord">F#m</span>
+                    <span style="margin-left: 10px" class="chord">E</span>
+                </div>
+            </div>
+
+            <div class="spacer"></div>
+            <span class="verse-label">Verso 1</span>
+            
+            <div class="lyrics-line">
+                <div class="chord-line">
+                    <span style="margin-left: 0px" class="chord">A/C#</span>
+                    <span style="margin-left: 30px" class="chord">D</span>
+                    <span style="margin-left: 10px" class="chord">F#m</span>
+                    <span style="margin-left: 20px" class="chord">E</span>
+                    <span style="margin-left: 5px" class="chord">F#m</span>
+                    <span style="margin-left: 5px" class="chord">E</span>
+                </div>
+                <div class="lyric-text">Eres alabado, eres exaltado</div>
+            </div>
+            <div class="lyrics-line">
+                <div class="chord-line">
+                    <span style="margin-left: 30px" class="chord">A/C#</span>
+                    <span style="margin-left: 50px" class="chord">D</span>
+                    <span style="margin-left: 40px" class="chord">F#m</span>
+                    <span style="margin-left: 40px" class="chord">E</span>
+                </div>
+                <div class="lyric-text">Tu nombre levantamos, aleluya, aleluya</div>
+            </div>
+            <div class="lyrics-line">
+                <div class="chord-line">
+                    <span style="margin-left: 0px" class="chord">A/C#</span>
+                    <span style="margin-left: 10px" class="chord">D</span>
+                    <span style="margin-left: 15px" class="chord">F#m</span>
+                    <span style="margin-left: 50px" class="chord">E</span>
+                </div>
+                <div class="lyric-text">Eres adorado te glorificamos</div>
+            </div>
+            <div class="lyrics-line">
+                <div class="chord-line">
+                    <span style="margin-left: 30px" class="chord">A/C#</span>
+                    <span style="margin-left: 50px" class="chord">D</span>
+                    <span style="margin-left: 50px" class="chord">F#m</span>
+                    <span style="margin-left: 20px" class="chord">E</span>
+                </div>
+                <div class="lyric-text">Tu nombre levantamos, aleluya, aleluya</div>
+            </div>
+
+            <div class="spacer"></div>
+            <span class="verse-label">Precoro</span>
+
+            <div class="lyrics-line">
+                <div class="chord-line">
+                    <span style="margin-left: 50px" class="chord">D</span>
+                    <span style="margin-left: 5px" class="chord">E</span>
+                    <span style="margin-left: 5px" class="chord">F#m</span>
+                    <span style="margin-left: 20px" class="chord">D</span>
+                    <span style="margin-left: 10px" class="chord">E</span>
+                    <span style="margin-left: 5px" class="chord">F#m</span>
+                </div>
+                <div class="lyric-text">A una sola voz, nos unimos hoy</div>
+            </div>
+            <div class="lyrics-line">
+                <div class="chord-line">
+                    <span style="margin-left: 50px" class="chord">D</span>
+                    <span style="margin-left: 10px" class="chord">E</span>
+                    <span style="margin-left: 5px" class="chord">F#m</span>
+                    <span style="margin-left: 50px" class="chord">E</span>
+                </div>
+                <div class="lyric-text">Te cantamos Dios en adoración</div>
+            </div>
+
+            <div class="spacer"></div>
+            <span class="verse-label">Coro</span>
+
+            <div class="lyrics-line">
+                <div class="chord-line">
+                    <span style="margin-left: 80px" class="chord">D</span>
+                    <span style="margin-left: 100px" class="chord">E</span>
+                </div>
+                <div class="lyric-text">Dios imparable, Dios de imposibles</div>
+            </div>
+            <div class="lyrics-line">
+                <div class="chord-line">
+                    <span style="margin-left: 40px" class="chord">A</span>
+                    <span style="margin-left: 20px" class="chord">E/G#</span>
+                    <span style="margin-left: 20px" class="chord">F#m</span>
+                </div>
+                <div class="lyric-text">Inigualable, eres invencible</div>
+            </div>
+            <div class="lyrics-line">
+                <div class="chord-line">
+                    <span style="margin-left: 80px" class="chord">D</span>
+                    <span style="margin-left: 80px" class="chord">E</span>
+                </div>
+                <div class="lyric-text">No tengo temor en mi corazón</div>
+            </div>
+            <div class="lyrics-line">
+                <div class="chord-line">
+                    <span style="margin-left: 110px" class="chord">F#m</span>
+                </div>
+                <div class="lyric-text">Tú tienes el control</div>
+            </div>
+            <div class="lyrics-line">
+                <div class="chord-line">
+                    <span style="margin-left: 80px" class="chord">Bm9</span>
+                    <span style="margin-left: 10px" class="chord">E</span>
+                    <span style="margin-left: 50px" class="chord">F#m</span>
+                </div>
+                <div class="lyric-text">No me falta nada si te tengo a ti</div>
+            </div>
+            <div class="lyrics-line">
+                <div class="chord-line">
+                    <span style="margin-left: 80px" class="chord">Bm9</span>
+                    <span style="margin-left: 20px" class="chord">E</span>
+                </div>
+                <div class="lyric-text">No me falta nada si te tengo a ti</div>
+            </div>
+
+            <div class="spacer"></div>
+            <span class="verse-label">Puente</span>
+            <div class="lyrics-line">
+                <div class="chord-line">
+                    <span style="margin-left: 0px" class="chord">F#m</span>
+                    <span style="margin-left: 5px" class="chord">E/G#</span>
+                    <span style="margin-left: 10px" class="chord">A</span>
+                    <span style="margin-left: 10px" class="chord">A/C#</span>
+                    <span style="margin-left: 10px" class="chord">Bm7</span>
+                </div>
+            </div>
+            <div class="lyrics-line">
+                <div class="chord-line">
+                    <span style="margin-left: 30px" class="chord">F#m</span>
+                    <span style="margin-left: 20px" class="chord">E/G#</span>
+                    <span style="margin-left: 20px" class="chord">A</span>
+                    <span style="margin-left: 10px" class="chord">A/C#</span>
+                    <span style="margin-left: 10px" class="chord">Bm</span>
+                </div>
+                <div class="lyric-text">Y yo sé quién va conmigo va por mi</div>
+            </div>
+            <div class="lyrics-line">
+                <div class="chord-line">
+                    <span style="margin-left: 40px" class="chord">F#m</span>
+                    <span style="margin-left: 20px" class="chord">E/G#</span>
+                    <span style="margin-left: 10px" class="chord">A</span>
+                    <span style="margin-left: 5px" class="chord">A/C#</span>
+                    <span style="margin-left: 5px" class="chord">Bm</span>
+                </div>
+                <div class="lyric-text">Y quien a mis enemigos hace huir</div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <p>Daniel Vigo - 2026</p>
+            <p style="margin-top: 10px; color: #666;">Desarrollado con ❤️</p>
+        </div>
+    </div>
+
+    <script>
+        let currentTranspose = 0;
+        let chordsVisible = true;
+        let fontSize = 1.1;
+        const originalKey = 'A'; 
+
+        const chromaticScale = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+        
+        function transposeChord(chord, semitones) {
+            if (!chord || chord === '-') return chord;
+            
+            const chordMatch = chord.match(/^([A-G][#b]?)(.*)/);
+            if (!chordMatch) return chord;
+            
+            let [, root, suffix] = chordMatch;
+            
+            root = root.replace('Db', 'C#').replace('Eb', 'D#').replace('Gb', 'F#')
+                          .replace('Ab', 'G#').replace('Bb', 'A#');
+            
+            let index = chromaticScale.indexOf(root);
+            if (index === -1) return chord;
+            
+            index = (index + semitones + 12) % 12;
+            
+            if (suffix.includes('/')) {
+                const parts = suffix.split('/');
+                const bassNote = parts[1];
+                const basMatch = bassNote.match(/^([A-G][#b]?)(.*)/);
+                
+                if (basMatch) {
+                    let [, bassRoot, bassRest] = basMatch;
+                    bassRoot = bassRoot.replace('Db', 'C#').replace('Eb', 'D#')
+                                     .replace('Gb', 'F#').replace('Ab', 'G#')
+                                     .replace('Bb', 'A#');
+                    
+                    let bassIndex = chromaticScale.indexOf(bassRoot);
+                    if (bassIndex !== -1) {
+                        bassIndex = (bassIndex + semitones + 12) % 12;
+                        suffix = parts[0] + '/' + chromaticScale[bassIndex] + bassRest;
+                    }
+                }
+            }
+            
+            return chromaticScale[index] + suffix;
+        }
+
+        function transpose(semitones) {
+            currentTranspose += semitones;
+            updateChords();
+        }
+
+        function resetKey() {
+            currentTranspose = 0;
+            updateChords();
+        }
+
+        function updateChords() {
+            const originalRootKey = originalKey.replace('m', '');
+            const newKey = transposeChord(originalRootKey, currentTranspose);
+            
+            document.getElementById('currentKey').textContent = originalKey.includes('m') ? (newKey.includes('m') ? newKey : newKey + 'm') : newKey.replace('m', '');
+            
+            const chords = document.querySelectorAll('.chord');
+            chords.forEach(chord => {
+                const originalChord = chord.getAttribute('data-original') || chord.textContent.trim();
+                if (!chord.hasAttribute('data-original')) {
+                    chord.setAttribute('data-original', originalChord);
+                }
+                chord.textContent = transposeChord(originalChord, currentTranspose);
+            });
+        }
+
+        function toggleChords() {
+            chordsVisible = !chordsVisible;
+            const elementsToToggle = document.querySelectorAll('.verse-label-1,.chord, .chord-line');
+            elementsToToggle.forEach(chord => {
+                chord.style.display = chordsVisible ? '' : 'none';
+            });
+            document.getElementById('chordsToggleText').textContent = 
+                chordsVisible ? 'Ocultar Acordes' : 'Mostrar Acordes';
+        }
+
+        function increaseFontSize() {
+            fontSize += 0.1;
+            const sections = document.querySelectorAll('.lyrics-section');
+            sections.forEach(section => {
+                section.style.fontSize = fontSize + 'em';
+            });
+        }
+
+        function decreaseFontSize() {
+            if (fontSize > 0.8) {
+                fontSize -= 0.1;
+                const sections = document.querySelectorAll('.lyrics-section');
+                sections.forEach(section => {
+                    section.style.fontSize = fontSize + 'em';
+                });
+            }
+        }
+
+        function goBack() {
+            window.history.back(); 
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const chords = document.querySelectorAll('.chord');
+            chords.forEach(chord => {
+                chord.setAttribute('data-original', chord.textContent.trim());
+            });
+            document.getElementById('currentKey').textContent = originalKey;
+        });
+
+        // Deshabilitar clic derecho
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Deshabilitar teclas como F12, Ctrl+U (Ver código fuente), Ctrl+Shift+I
+        document.onkeydown = function(e) {
+            if(event.keyCode == 123) { // F12
+            return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { // Ctrl+Shift+I
+            return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { // Ctrl+Shift+C
+            return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { // Ctrl+Shift+J
+            return false;
+            }
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { // Ctrl+U
+            return false;
+            }
+        }
+    </script>
+</body>
+</html>
