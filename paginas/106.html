@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleluya a nuestro Dios - Marcos Witt</title>
+    <title>Sobrenatural - Marcos Witt</title>
     <link rel="icon" type="image/x-icon" href="image/logo.jpg" />
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -174,6 +174,14 @@
             padding-bottom: 5px;
         }
 
+        .note-box {
+            border: 2px solid #1db954;
+            background: rgba(40, 40, 40, 0.7);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
         .footer {
             text-align: center;
             padding: 30px 20px;
@@ -204,7 +212,7 @@
                 </svg>
             </button>
             <div class="song-header-info">
-                <div class="song-title-header">Aleluya a nuestro Dios</div>
+                <div class="song-title-header">Sobrenatural</div>
                 <div class="song-artist-header">Marcos Witt</div>
             </div>
         </div>
@@ -214,8 +222,8 @@
     <div class="controls">
         <div class="control-group">
             <span class="control-label">Tonalidad:</span>
-            <!-- Tonalidad base D -->
-            <div class="current-key" id="currentKey">D</div>
+            <!-- Tonalidad base G -->
+            <div class="current-key" id="currentKey">G</div>
         </div>
         <div class="control-group">
             <span class="control-label">Transponer:</span>
@@ -236,20 +244,19 @@
     <div class="song-container">
         <div class="lyrics-section" id="lyricsSection">
 
-            <!-- INTRO / ESTRIBILLO -->
+            <!-- INTRO -->
             <div class="song-section">
-                <div class="section-header">Coro</div>
+                <div class="section-header">Intro</div>
                 <div class="lyrics-block">
                     <div class="lyrics-line">
                         <div class="chord-line">
-                            <span class="chord">D</span>
-                            <span style="margin-left: -40px;" class="chord">G</span>
-                            <span style="margin-left: -20px;" class="chord">Em</span>
-                            <span style="margin-left: -40px;" class="chord">C</span>
-                            <span class="chord">D</span>
+                            <span class="chord">G</span>
+                            <span style="margin-left: -30px;"class="chord">D/F#</span>
+                            <span style="margin-left: -30px;"class="chord">Em</span>
+                            <span style="margin-left: -40px;"class="chord">C</span>
                         </div>
                         <div class="lyric-text">
-                            Aleluya, Aleluya, Ale &nbsp;&nbsp;&nbsp;luya a nuestro Dios
+                            <!-- Intro instrumental -->
                         </div>
                     </div>
                 </div>
@@ -259,60 +266,75 @@
             <div class="song-section">
                 <div class="section-header">Verso</div>
                 <div class="lyrics-block">
-
-                    <div class="lyrics-line">
-                        <div class="chord-line">
-                            <span class="chord">D</span>
-                            <span style="margin-left: 30px;" class="chord">D6</span>
-                            <span class="chord">D7</span>
-                        </div>
-                        <div class="lyric-text">
-                            Todos sus siervos, los que le temen
-                        </div>
-                    </div>
-
-                    <div class="lyrics-line">
-                        <div class="chord-line">
-                            <span class="chord">G</span>
-                            <span style="margin-left: 30px;" class="chord">D/F#</span>
-                        </div>
-                        <div class="lyric-text">
-                            Los pequeños y grandes
-                        </div>
-                    </div>
+                    <!-- Línea 1 -->
                     <div class="lyrics-line">
                         <div class="chord-line">
                             <span class="chord">Em</span>
-                            <span style="margin-left: 20px;" class="chord">G</span>
+                            <span style="margin-left: -30px;"class="chord">D/F#</span>
+                            <span style="margin-left: -30px;"class="chord">G</span>
                         </div>
                         <div class="lyric-text">
-                            alabad a nuestro Dios
+                            Sobre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;na&nbsp;&nbsp;&nbsp;tu&nbsp;&nbsp;&nbsp;&nbsp;ral
                         </div>
                     </div>
-
-                    <div class="lyrics-line">
+                     <div class="lyrics-line">
                         <div class="chord-line">
-                            <span class="chord">D</span>
-                            <span style="margin-left: 10px;" class="chord">D6</span>
-                            <span class="chord">D7</span>
-                        </div>
-                        <div class="lyric-text">
-                            Él es Dios Santo, justos sus juicios
-                        </div>
-                    </div>
-
-                    <div class="lyrics-line">
-                        <div class="chord-line">
-                            <span class="chord">G</span>
+                            <span class="chord">Em</span>
                             <span class="chord">D/F#</span>
-                            <span style="margin-left: -20px;" class="chord">Em</span>
-                            <span class="chord">G</span>
+                            <span style="margin-left: -30px;"class="chord">G</span>
                         </div>
                         <div class="lyric-text">
-                            Es fiel y verdadero, alabad a nuestro Dios
+                            eres Dios sin igual
                         </div>
                     </div>
 
+                    <!-- Línea 2 -->
+                    <div class="lyrics-line">
+                        <div class="chord-line">
+                            <span class="chord">Em</span>
+                            <span style="margin-left: -30px;"class="chord">D/F#</span>
+                            <span style="margin-left: -30px;"class="chord">G</span>
+                            <span class="chord">C</span>
+                        </div>
+                        <div class="lyric-text">
+                            dueño del cielo y mar, sobrenatural
+                        </div>
+                    </div>
+
+                    <!-- Línea 3 -->
+                    <div class="lyrics-line">
+                        <div class="chord-line">
+                            <span class="chord">Em</span>
+                            <span style="margin-left: -30px;"class="chord">D/F#</span>
+                            <span style="margin-left: -30px;"class="chord">G</span>
+                        </div>
+                        <div class="lyric-text">
+                            Sobre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;na&nbsp;&nbsp;&nbsp;tu&nbsp;&nbsp;&nbsp;&nbsp;ral
+                        </div>
+                    </div>
+                     <div class="lyrics-line">
+                        <div class="chord-line">
+                            <span class="chord">Em</span>
+                            <span class="chord">D/F#</span>
+                            <span style="margin-left: -30px;"class="chord">G</span>
+                        </div>
+                        <div class="lyric-text">
+                            habitas la eternidad
+                        </div>
+                    </div>
+
+                    <!-- Línea 4 -->
+                     <div class="lyrics-line">
+                        <div class="chord-line">
+                            <span class="chord">Em</span>
+                            <span style="margin-left: -30px;"class="chord">D/F#</span>
+                            <span style="margin-left: -30px;"class="chord">G</span>
+                            <span class="chord">C</span>
+                        </div>
+                        <div class="lyric-text">
+                            Eres es el manantial, sobrenatural
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -320,105 +342,122 @@
             <div class="song-section">
                 <div class="section-header">Coro</div>
                 <div class="lyrics-block">
-
-                    <div class="lyrics-line">
-                        <div class="chord-line">
-                            <span class="chord">D</span>
-                            <span style="margin-left: 10px;" class="chord">D6</span>
-                            <span class="chord">D7</span>
-                        </div>
-                        <div class="lyric-text">
-                            Démosle gloria, démosle honra
-                        </div>
-                    </div>
-
+                    <!-- Línea 1 coro -->
                     <div class="lyrics-line">
                         <div class="chord-line">
                             <span class="chord">G</span>
-                            <span class="chord">D/F#</span>
-                            <span style="margin-left: -20px;" class="chord">Em</span>
-                            <span class="chord">G</span>
-                        </div>
-                        <div class="lyric-text">
-                            La hora ha llegado, al Cordero exaltad
-                        </div>
-                    </div>
-
-                    <div class="lyrics-line">
-                        <div class="chord-line">
-                            <span class="chord">D</span>
-                            <span style="margin-left: 20px;" class="chord">D6</span>
-                            <span class="chord">D7</span>
-                        </div>
-                        <div class="lyric-text">
-                            Su trono es firme, siempre eterno
-                        </div>
-                    </div>
-
-                    <div class="lyrics-line">
-                        <div class="chord-line">
-                            <span class="chord">G</span>
-                            <span class="chord">D/F#</span>
+                            <span style="margin-left: -20px;" class="chord">D/F#</span>
                             <span class="chord">Em</span>
+                        </div>
+                        <div class="lyric-text">
+                            Dios de mi vida, eres Dios
+                        </div>
+                    </div>
+                    <div class="lyrics-line">
+                        <div class="chord-line">
+                            <span style="margin-left: 30px;"class="chord">C</span>
                             <span class="chord">G</span>
                         </div>
                         <div class="lyric-text">
-                            Cetro de justicia, es el cetro del gran Rey
+                            de los cielos, eres Dios
                         </div>
                     </div>
 
+                    <!-- Línea 2 coro -->
+                    <div class="lyrics-line">
+                        <div class="chord-line">
+                            <span style="margin-left: 30px;"class="chord">D/F#</span>
+                            <span class="chord">Em</span>
+                            <span style="margin-left: -40px;"class="chord">C</span>
+                            <span style="margin-left: -20px;"class="chord">G</span>
+                        </div>
+                        <div class="lyric-text">
+                            de los mares eres Dios, sobrenatural
+                        </div>
+                    </div>
+
+                    <!-- Línea 3 coro -->
+                    <div class="lyrics-line">
+                        <div class="chord-line">
+                            <span style="margin-left: 30px;"class="chord">D/F#</span>
+                            <span class="chord">Em</span>
+                            <span style="margin-left: -40px;"class="chord">C</span>
+                            <span style="margin-left: -20px;"class="chord">G</span>
+                        </div>
+                        <div class="lyric-text">
+                            De la tierra eres Dios, mi sustento eres Dios
+                        </div>
+                    </div>
+
+                    <!-- Línea 4 coro -->
+                    <div class="lyrics-line">
+                        <div class="chord-line">
+                            <span style="margin-left: 50px;" class="chord">D/F#</span>
+                            <span class="chord">G/B</span>
+                            <span style="margin-left: -40px;"class="chord">C</span>
+                            <span style="margin-left: -20px;"class="chord">G</span>
+                        </div>
+                        <div class="lyric-text">
+                            siempre eterno eres Dios, sobrenatural
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- PUENTE -->
+            <!-- VERSO 2 / FINAL -->
             <div class="song-section">
-                <div class="section-header">Puente</div>
+                <div class="section-header">Final</div>
                 <div class="lyrics-block">
-
+                    <!-- Repetición verso inicial -->
                     <div class="lyrics-line">
                         <div class="chord-line">
                             <span class="chord">Em</span>
-                            <span class="chord">G</span>
-                            <span class="chord">D</span>
+                            <span style="margin-left: -30px;"class="chord">D/F#</span>
+                            <span style="margin-left: -30px;"class="chord">G</span>
                         </div>
                         <div class="lyric-text">
-                            Gran multitud, estruendo de muchas aguas
+                            Sobre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;na&nbsp;&nbsp;&nbsp;tu&nbsp;&nbsp;&nbsp;&nbsp;ral
+                        </div>
+                    </div>
+                     <div class="lyrics-line">
+                        <div class="chord-line">
+                            <span class="chord">Em</span>
+                            <span class="chord">D/F#</span>
+                            <span style="margin-left: -30px;"class="chord">G</span>
+                        </div>
+                        <div class="lyric-text">
+                            eres Dios sin igual
                         </div>
                     </div>
 
+                    <!-- Línea 2 -->
                     <div class="lyrics-line">
                         <div class="chord-line">
                             <span class="chord">Em</span>
-                            <span class="chord">G</span>
-                            <span class="chord">D</span>
+                            <span style="margin-left: -30px;"class="chord">D/F#</span>
+                            <span style="margin-left: -30px;"class="chord">G</span>
+                            <span class="chord">C</span>
                         </div>
                         <div class="lyric-text">
-                            Levanten su voz, den voces de júbilo al Rey
+                            dueño del cielo y mar, sobrenatural
                         </div>
                     </div>
 
+
+                    <!-- Cierre sobrenatural repetido -->
                     <div class="lyrics-line">
                         <div class="chord-line">
                             <span class="chord">Em</span>
-                            <span class="chord">G</span>
-                            <span class="chord">D</span>
+                            <span style="margin-left: -30px;"class="chord">C</span>
+                            <span style="margin-left: -40px;"class="chord">Em</span>
+                            <span style="margin-left: -30px;"class="chord">C</span>
+                            <span style="margin-left: -40px;" class="chord">Em</span>
+                            <span style="margin-left: -30px;"class="chord">D</span>
                         </div>
                         <div class="lyric-text">
-                            Del norte al sur declaren por siempre su gloria
+                            sobrenatural, sobrenatural, sobrenatural
                         </div>
                     </div>
-
-                    <div class="lyrics-line">
-                        <div class="chord-line">
-                            <span class="chord">G</span>
-                            <span class="chord">Em</span>
-                            <span class="chord">A</span>
-                        </div>
-                        <div class="lyric-text">
-                            Él es nuestro Dios, todopoderoso gran Rey
-                        </div>
-                    </div>
-
                 </div>
             </div>
 
@@ -434,7 +473,7 @@
         let currentTranspose = 0;
         let chordsVisible = true;
         let fontSize = 1.1;
-        const originalKey = 'D';
+        const originalKey = 'G';
 
         const chromaticScale = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
         const normalizeMap = {
@@ -456,45 +495,18 @@
         function transposeChord(chord, semitones) {
             if (!chord || chord === '-') return chord;
 
-            // 1) Paréntesis
-            if (chord.includes('(') && chord.includes(')')) {
-                const rootMatch = /^([A-G][#b]*)(.*)$/.exec(chord);
-                if (rootMatch) {
-                    const rootNote = rootMatch[1];
-                    const suffix = rootMatch[2];
-                    const newRootNote = transposeNote(rootNote, semitones);
-                    return newRootNote + suffix;
-                }
-            }
-
-            // 2) m7b5
-            if (chord.includes('m7b5')) {
-                const rootMatch = /^([A-G][#b]*)m7b5$/.exec(chord);
-                if (rootMatch) {
-                    const root = rootMatch[1];
-                    const newRoot = transposeNote(root, semitones);
-                    return newRoot + 'm7b5';
-                }
-            }
-
-            // 3) Slash chords
             if (chord.includes('/')) {
                 const parts = chord.split('/');
                 const root = (parts[0] || '').trim();
                 const bassRaw = (parts[1] || '').trim();
-
                 const newRoot = transposeChord(root, semitones);
-
                 const bassMatch = /^([A-Ga-g][#b]?)/.exec(bassRaw);
                 if (!bassMatch) return newRoot;
-
                 const bassNote = bassMatch[1].toUpperCase();
                 const newBassNote = transposeNote(bassNote, semitones);
-
                 return newRoot + '/' + newBassNote;
             }
 
-            // 4) menores / maj
             if (chord.includes('m')) {
                 if (chord.includes('maj')) {
                     const rootMatch = /^([A-G][#b]*)maj/.exec(chord);
@@ -518,9 +530,9 @@
                 /^([A-G][#b]*)(6|7|7sus4|7sus2|9|11|13|#9|b9|#11|b13)$/,
                 /^([A-G][#b]*)(maj7|maj9|maj13)$/,
                 /^([A-G][#b]*)(m7|m9|m11|m13)$/,
-                /^([A-G][#b]*)(sus2|sus4|sus|4)$/,
-                /^([A-G][#b]*)(add2|add9|add11|add13)$/,
-                /^([A-G][#b]*)(°7?)$/
+                /^([A-G][#b]*)(sus2|sus4|sus|4|sus4)$/,
+                /^([A-G][#b]*)(add9|add11|add13)$/,
+                /^([A-G][#b]*)(dim7|dim|°7?)$/
             ];
 
             for (const pattern of patterns) {
@@ -600,11 +612,11 @@
         document.addEventListener('contextmenu', event => event.preventDefault());
 
         document.onkeydown = function(e) {
-            if(event.keyCode == 123) { return false; }
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { return false; }
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { return false; }
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { return false; }
-            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { return false; }
+            if (event.keyCode == 123) { return false; }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { return false; }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { return false; }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { return false; }
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { return false; }
         }
     </script>
 </body>

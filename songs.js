@@ -6,7 +6,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "A",
     cover: "image/1.jpg",
-    page: "1.html"
+    page: "paginas/1.html"
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "D",
     cover: "image/2.jpg",
-    page: "2.html"
+    page: "paginas/2.html"
   },
   {
     id: 3,
@@ -22,7 +22,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "D",
     cover: "image/2.jpg",
-    page: "3.html"
+    page: "paginas/3.html"
   },
   {
     id: 4,
@@ -30,7 +30,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Bm",
     cover: "image/1.jpg",
-    page: "4.html"
+    page: "paginas/4.html"
   },
   {
     id: 5,
@@ -38,7 +38,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "D",
     cover: "image/2.jpg",
-    page: "5.html"
+    page: "paginas/5.html"
   },
   {
     id: 6,
@@ -46,7 +46,7 @@ const songs = [
     artist: "Hillsong",
     key: "A",
     cover: "image/6.jpeg",
-    page: "6.html"
+    page: "paginas/6.html"
   },
   {
     id: 7,
@@ -54,7 +54,7 @@ const songs = [
     artist: "Hillsong",
     key: "Fm",
     cover: "image/7.jpg",
-    page: "7.html"
+    page: "paginas/7.html"
   },
   {
     id: 8,
@@ -62,7 +62,7 @@ const songs = [
     artist: "Elevation Worship",
     key: "D#",
     cover: "image/8.jpg",
-    page: "8.html"
+    page: "paginas/8.html"
   },
   {
     id: 9,
@@ -70,7 +70,7 @@ const songs = [
     artist: "Bethel",
     key: "Dm",
     cover: "image/9.jpeg",
-    page: "9.html"
+    page: "paginas/9.html"
   },
   {
     id: 10,
@@ -78,7 +78,7 @@ const songs = [
     artist: "IBI",
     key: "Gm",
     cover: "image/10.jpg",
-    page: "10.html"
+    page: "paginas/10.html"
   },
   {
     id: 11,
@@ -86,7 +86,7 @@ const songs = [
     artist: "IBI",
     key: "F#",
     cover: "image/11.jpg",
-    page: "11.html"
+    page: "paginas/11.html"
   },
   {
     id: 12,
@@ -94,7 +94,7 @@ const songs = [
     artist: "Jonathan & Sarah Jerez",
     key: "F",
     cover: "image/12.jpg",
-    page: "12.html"
+    page: "paginas/12.html"
   },
   {
     id: 13,
@@ -102,7 +102,7 @@ const songs = [
     artist: "Eccos",
     key: "G",
     cover: "image/13.jpeg",
-    page: "13.html"
+    page: "paginas/13.html"
   },
   {
     id: 14,
@@ -110,7 +110,7 @@ const songs = [
     artist: "Hillsong",
     key: "F",
     cover: "image/14.jpg",
-    page: "14.html"
+    page: "paginas/14.html"
   },
   {
     id: 15,
@@ -118,7 +118,7 @@ const songs = [
     artist: "Hillsong",
     key: "Cm",
     cover: "image/15.jpg",
-    page: "15.html"
+    page: "paginas/15.html"
   },
   {
     id: 16,
@@ -126,7 +126,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "A",
     cover: "image/52.jpg",
-    page: "16.html"
+    page: "paginas/16.html"
   },
   {
     id: 17,
@@ -134,7 +134,7 @@ const songs = [
     artist: "Rojo",
     key: "E",
     cover: "image/17.jpg",
-    page: "17.html"
+    page: "paginas/17.html"
   },
   {
     id: 18,
@@ -142,7 +142,7 @@ const songs = [
     artist: "Danilo Montero",
     key: "D",
     cover: "image/18.jpeg",
-    page: "18.html"
+    page: "paginas/18.html"
   },
   {
     id: 19,
@@ -150,7 +150,7 @@ const songs = [
     artist: "Sonido Cristiano",
     key: "C",
     cover: "image/19.jpg",
-    page: "19.html"
+    page: "paginas/19.html"
   },
   {
     id: 20,
@@ -158,7 +158,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Am",
     cover: "image/2.jpg",
-    page: "20.html"
+    page: "paginas/20.html"
   },
   {
     id: 21,
@@ -166,7 +166,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Cm",
     cover: "image/21.jpeg",
-    page: "21.html"
+    page: "paginas/21.html"
   },
   {
     id: 22,
@@ -174,7 +174,7 @@ const songs = [
     artist: "Phil Wickham",
     key: "A",
     cover: "image/22.jpg",
-    page: "22.html"
+    page: "paginas/22.html"
   },
   {
     id: 23,
@@ -196,7 +196,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Dm",
     cover: "image/54.jpg",
-    page: "23.html"
+    page: "paginas/23.html"
   },
   {
     id: 26,
@@ -337,7 +337,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "F",
     cover: "image/45.webp",
-    page: "24.html"
+    page: "paginas/24.html"
   },
   {
     id: 45,
@@ -345,7 +345,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "F",
     cover: "image/45.webp",
-    page: "25.html"
+    page: "paginas/25.html"
   },
   {
     id: 46,
@@ -353,7 +353,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Cm",
     cover: "image/46.jfif",
-    page: "26.html"
+    page: "paginas/26.html"
   },
   {
     id: 47,
@@ -361,7 +361,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "D",
     cover: "image/46.jfif",
-    page: "27.html"
+    page: "paginas/27.html"
   },
   {
     id: 48,
@@ -369,7 +369,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "C",
     cover: "image/46.jfif",
-    page: "28.html"
+    page: "paginas/28.html"
   },
   {
     id: 49,
@@ -377,7 +377,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Bm",
     cover: "image/46.jfif",
-    page: "29.html"
+    page: "paginas/29.html"
   },
   {
     id: 50,
@@ -385,7 +385,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Bm",
     cover: "image/46.jfif",
-    page: "30.html"
+    page: "paginas/30.html"
   },
   {
     id: 51,
@@ -393,7 +393,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "D",
     cover: "image/46.jfif",
-    page: "31.html"
+    page: "paginas/31.html"
   },
   {
     id: 52,
@@ -401,7 +401,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "G",
     cover: "image/46.jfif",
-    page: "32.html"
+    page: "paginas/32.html"
   },
   {
     id: 53,
@@ -409,7 +409,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "D",
     cover: "image/46.jfif",
-    page: "33.html"
+    page: "paginas/33.html"
   },
   {
     id: 54,
@@ -417,7 +417,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "D",
     cover: "image/46.jfif",
-    page: "34.html"
+    page: "paginas/34.html"
   },
   {
     id: 55,
@@ -425,7 +425,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "D",
     cover: "image/46.jfif",
-    page: "35.html"
+    page: "paginas/35.html"
   },
   {
     id: 56,
@@ -433,7 +433,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "G",
     cover: "image/46.jfif",
-    page: "36.html"
+    page: "paginas/36.html"
   },
   {
     id: 57,
@@ -441,7 +441,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "G",
     cover: "image/46.jfif",
-    page: "37.html"
+    page: "paginas/37.html"
   },
   {
     id: 58,
@@ -449,7 +449,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "G",
     cover: "image/47.jfif",
-    page: "38.html"
+    page: "paginas/38.html"
   },
   {
     id: 59,
@@ -457,7 +457,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Gm",
     cover: "image/47.jfif",
-    page: "39.html"
+    page: "paginas/39.html"
   },
   {
     id: 60,
@@ -465,7 +465,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "D",
     cover: "image/47.jfif",
-    page: "40.html"
+    page: "paginas/40.html"
   },
   {
     id: 61,
@@ -473,7 +473,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Bb",
     cover: "image/47.jfif",
-    page: "41.html"
+    page: "paginas/41.html"
   },
   {
     id: 62,
@@ -481,7 +481,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "C",
     cover: "image/47.jfif",
-    page: "42.html"
+    page: "paginas/42.html"
   },
   {
     id: 63,
@@ -489,7 +489,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "F",
     cover: "image/47.jfif",
-    page: "43.html"
+    page: "paginas/43.html"
   },
   {
     id: 64,
@@ -497,7 +497,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "A",
     cover: "image/47.jfif",
-    page: "44.html"
+    page: "paginas/44.html"
   },
   {
     id: 65,
@@ -505,7 +505,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Gm",
     cover: "image/47.jfif",
-    page: "45.html"
+    page: "paginas/45.html"
   },
   {
     id: 66,
@@ -513,7 +513,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Gm",
     cover: "image/47.jfif",
-    page: "46.html"
+    page: "paginas/46.html"
   },
   {
     id: 67,
@@ -521,7 +521,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "G",
     cover: "image/48.jpg",
-    page: "47.html"
+    page: "paginas/47.html"
   },
   {
     id: 68,
@@ -529,7 +529,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Cm",
     cover: "image/48.jpg",
-    page: "48.html"
+    page: "paginas/48.html"
   },
   {
     id: 69,
@@ -537,7 +537,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Cm",
     cover: "image/48.jpg",
-    page: "49.html"
+    page: "paginas/49.html"
   },
   {
     id: 70,
@@ -545,7 +545,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "G",
     cover: "image/48.jpg",
-    page: "50.html"
+    page: "paginas/50.html"
   },
   {
     id: 71,
@@ -553,7 +553,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "A",
     cover: "image/48.jpg",
-    page: "51.html"
+    page: "paginas/51.html"
   },
   {
     id: 72,
@@ -585,7 +585,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Bb",
     cover: "image/48.jpg",
-    page: "52.html"
+    page: "paginas/52.html"
   },
   {
     id: 76,
@@ -593,7 +593,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Bb",
     cover: "image/52.jpg",
-    page: "53.html"
+    page: "paginas/53.html"
   },
   {
     id: 77,
@@ -601,7 +601,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Dm",
     cover: "image/52.jpg",
-    page: "54.html"
+    page: "paginas/54.html"
   },
   {
     id: 78,
@@ -609,7 +609,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "D",
     cover: "image/53.jfif",
-    page: "55.html"
+    page: "paginas/55.html"
   },
   {
     id: 79,
@@ -617,7 +617,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Gm",
     cover: "image/53.jfif",
-    page: "56.html"
+    page: "paginas/56.html"
   },
   {
     id: 80,
@@ -625,7 +625,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "C#m",
     cover: "image/53.jfif",
-    page: "57.html"
+    page: "paginas/57.html"
   },
   {
     id: 81,
@@ -633,7 +633,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Bb",
     cover: "image/53.jfif",
-    page: "58.html"
+    page: "paginas/58.html"
   },
   {
     id: 82,
@@ -641,7 +641,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "C",
     cover: "image/53.jfif",
-    page: "59.html"
+    page: "paginas/59.html"
   },
   {
     id: 83,
@@ -649,7 +649,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "G",
     cover: "image/53.jfif",
-    page: "60.html"
+    page: "paginas/60.html"
   },
   {
     id: 84,
@@ -657,7 +657,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "A",
     cover: "image/53.jfif",
-    page: "61.html"
+    page: "paginas/61.html"
   },
   {
     id: 85,
@@ -665,7 +665,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "A",
     cover: "image/53.jfif",
-    page: "62.html"
+    page: "paginas/62.html"
   },
   {
     id: 86,
@@ -673,7 +673,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "G",
     cover: "image/54.jpg",
-    page: "63.html"
+    page: "paginas/63.html"
   },
   {
     id: 87,
@@ -681,7 +681,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "E",
     cover: "image/54.jpg",
-    page: "64.html"
+    page: "paginas/64.html"
   },
   {
     id: 88,
@@ -689,7 +689,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "D",
     cover: "image/2.jpg",
-    page: "65.html"
+    page: "paginas/65.html"
   },
   {
     id: 89,
@@ -697,7 +697,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "G",
     cover: "image/2.jpg",
-    page: "66.html"
+    page: "paginas/66.html"
   },
   {
     id: 90,
@@ -705,7 +705,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "D",
     cover: "image/2.jpg",
-    page: "67.html"
+    page: "paginas/67.html"
   },
   {
     id: 100,
@@ -713,7 +713,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "A",
     cover: "image/2.jpg",
-    page: "68.html"
+    page: "paginas/68.html"
   },
   {
     id: 101,
@@ -721,7 +721,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Dm",
     cover: "image/2.jpg",
-    page: "69.html"
+    page: "paginas/69.html"
   },
   {
     id: 102,
@@ -729,7 +729,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "G",
     cover: "image/55.jfif",
-    page: "70.html"
+    page: "paginas/70.html"
   },
   {
     id: 103,
@@ -737,7 +737,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "G",
     cover: "image/55.jfif",
-    page: "71.html"
+    page: "paginas/71.html"
   },
   {
     id: 104,
@@ -745,7 +745,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "F#",
     cover: "image/55.jfif",
-    page: "72.html"
+    page: "paginas/72.html"
   },
   {
     id: 105,
@@ -753,7 +753,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "G",
     cover: "image/55.jfif",
-    page: "73.html"
+    page: "paginas/73.html"
   },
   {
     id: 106,
@@ -761,7 +761,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "C",
     cover: "image/56.jpg",
-    page: "74.html"
+    page: "paginas/74.html"
   },
   {
     id: 107,
@@ -769,7 +769,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "E",
     cover: "image/57.jfif",
-    page: "75.html"
+    page: "paginas/75.html"
   },
   {
     id: 108,
@@ -777,7 +777,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "G#m",
     cover: "image/58.jfif",
-    page: "76.html"
+    page: "paginas/76.html"
   },
   {
     id: 109,
@@ -785,7 +785,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "F",
     cover: "image/59.jfif",
-    page: "77.html"
+    page: "paginas/77.html"
   },
   {
     id: 110,
@@ -793,7 +793,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "E",
     cover: "image/59.jfif",
-    page: "78.html"
+    page: "paginas/78.html"
   },
   {
     id: 111,
@@ -801,7 +801,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Em",
     cover: "image/59.jfif",
-    page: "79.html"
+    page: "paginas/79.html"
   },
   {
     id: 112,
@@ -809,7 +809,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "E",
     cover: "image/59.jfif",
-    page: "80.html"
+    page: "paginas/80.html"
   },
   {
     id: 113,
@@ -817,7 +817,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "D",
     cover: "image/59.jfif",
-    page: "81.html"
+    page: "paginas/81.html"
   },
   {
     id: 114,
@@ -825,7 +825,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Em",
     cover: "image/61.jpg",
-    page: "82.html"
+    page: "paginas/82.html"
   },
   {
     id: 115,
@@ -833,7 +833,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Dm",
     cover: "image/60.jfif",
-    page: "83.html"
+    page: "paginas/83.html"
   },
   {
     id: 116,
@@ -841,7 +841,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "F#",
     cover: "image/60.jfif",
-    page: "84.html"
+    page: "paginas/84.html"
   },
   {
     id: 117,
@@ -849,7 +849,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Em",
     cover: "image/60.jfif",
-    page: "85.html"
+    page: "paginas/85.html"
   },
   {
     id: 118,
@@ -857,7 +857,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Am",
     cover: "image/62.jpg",
-    page: "86.html"
+    page: "paginas/86.html"
   },
   {
     id: 119,
@@ -865,7 +865,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Bm",
     cover: "image/62.jpg",
-    page: "87.html"
+    page: "paginas/87.html"
   },
   {
     id: 120,
@@ -873,7 +873,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Em",
     cover: "image/62.jpg",
-    page: "88.html"
+    page: "paginas/88.html"
   },
   {
     id: 121,
@@ -881,7 +881,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "E",
     cover: "image/63.jfif",
-    page: "89.html"
+    page: "paginas/89.html"
   },
   {
     id: 122,
@@ -889,7 +889,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "G",
     cover: "image/63.jfif",
-    page: "90.html"
+    page: "paginas/90.html"
   },
   {
     id: 123,
@@ -897,7 +897,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "A",
     cover: "image/63.jfif",
-    page: "91.html"
+    page: "paginas/91.html"
   },
   {
     id: 124,
@@ -905,7 +905,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Am",
     cover: "image/63.jfif",
-    page: "92.html"
+    page: "paginas/92.html"
   },
   {
     id: 125,
@@ -913,7 +913,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "C",
     cover: "image/63.jfif",
-    page: "93.html"
+    page: "paginas/93.html"
   },
   {
     id: 126,
@@ -921,7 +921,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "Eb",
     cover: "image/63.jfif",
-    page: "94.html"
+    page: "paginas/94.html"
   },
   {
     id: 127,
@@ -929,7 +929,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "A",
     cover: "image/63.jfif",
-    page: "95.html"
+    page: "paginas/95.html"
   },
   {
     id: 128,
@@ -937,7 +937,7 @@ const songs = [
     artist: "Marcos Witt",
     key: "G",
     cover: "image/63.jfif",
-    page: "96.html"
+    page: "paginas/96.html"
   },
   {
     id: 129,
@@ -945,7 +945,102 @@ const songs = [
     artist: "Marcos Witt",
     key: "D",
     cover: "image/63.jfif",
-    page: "97.html"
+    page: "paginas/97.html"
+  },
+  {
+    id: 130,
+    title: "Tu nombre oh Dios",
+    artist: "Marcos Witt",
+    key: "A",
+    cover: "image/64.jfif",
+    page: "paginas/98.html"
+  },
+  {
+    id: 131,
+    title: "Poderoso",
+    artist: "Marcos Witt",
+    key: "Am",
+    cover: "image/64.jfif",
+    page: "paginas/99.html"
+  },
+  {
+    id: 132,
+    title: "A ti",
+    artist: "Marcos Witt",
+    key: "F",
+    cover: "image/64.jfif",
+    page: "paginas/100.html"
+  },
+  {
+    id: 133,
+    title: "Cristo es mi señor",
+    artist: "Marcos Witt",
+    key: "Dm",
+    cover: "image/64.jfif",
+    page: "paginas/101.html"
+  },
+  {
+    id: 134,
+    title: "Exaltate",
+    artist: "Marcos Witt",
+    key: "G",
+    cover: "image/64.jfif",
+    page: "paginas/102.html"
+  },
+  {
+    id: 135,
+    title: "En los montes, en los valles",
+    artist: "Marcos Witt",
+    key: "Dm",
+    cover: "image/65.jpg",
+    page: "paginas/103.html"
+  },
+  {
+    id: 136,
+    title: "Dios ha sido bueno",
+    artist: "Marcos Witt",
+    key: "F",
+    cover: "image/65.jpg",
+    page: "paginas/104.html"
+  },
+  {
+    id: 137,
+    title: "Más que palabras",
+    artist: "Marcos Witt",
+    key: "D",
+    cover: "image/66.jfif",
+    page: "paginas/105.html"
+  },
+  {
+    id: 138,
+    title: "Sobrenatural",
+    artist: "Marcos Witt",
+    key: "G",
+    cover: "image/21.jpeg",
+    page: "paginas/106.html"
+  },
+  {
+    id: 139,
+    title: "Si puedes creer",
+    artist: "Marcos Witt",
+    key: "D",
+    cover: "image/21.jpeg",
+    page: "paginas/107.html"
+  },
+  {
+    id: 140,
+    title: "Poderoso Dios",
+    artist: "Marcos Witt",
+    key: "C",
+    cover: "image/21.jpeg",
+    page: "paginas/108.html"
+  },
+  {
+    id: 141,
+    title: "Al estar aqui",
+    artist: "Marcos Witt",
+    key: "F#",
+    cover: "image/1.jpg",
+    page: "paginas/109.html"
   }
-
 ];
