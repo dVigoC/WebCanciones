@@ -117,7 +117,7 @@ const songs = [
     title: "Hossana",
     artist: "Hillsong",
     key: "Cm",
-    cover: "image/15.jpg",
+    cover: "image/6.jpeg",
     page: "paginas/15.html"
   },
   {
@@ -1042,5 +1042,77 @@ const songs = [
     key: "F#",
     cover: "image/1.jpg",
     page: "paginas/109.html"
+  },
+  {
+    id: 142,
+    title: "Al que es digno ",
+    artist: "Marcos Witt",
+    key: "D",
+    cover: "image/1.jpg",
+    page: "paginas/110.html"
+  },
+  {
+    id: 143,
+    title: "Tu mirada / Hermoso eres",
+    artist: "Marcos Witt",
+    key: "G#",
+    cover: "image/1.jpg",
+    page: "paginas/111.html"
+  },
+  {
+    id: 144,
+    title: "Escucharte Hablar / Dios Ha sido Bueno",
+    artist: "Marcos Witt",
+    key: "G",
+    cover: "image/1.jpg",
+    page: "paginas/112.html"
+  },
+  {
+    id: 145,
+    title: "Gracias / Tu Fidelidad",
+    artist: "Marcos Witt",
+    key: "F",
+    cover: "image/1.jpg",
+    page: "paginas/113.html"
+  },
+  {
+    id: 146,
+    title: "Tomalo",
+    artist: "Hillsong",
+    key: "B",
+    cover: "image/6.jpeg",
+    page: "paginas/114.html"
+  },
+  {
+    id: 147,
+    title: "Praise",
+    artist: "Elevation Worship",
+    key: "A",
+    cover: "image/67.jpg",
+    page: "paginas/115.html"
+  },
+  {
+    id: 148,
+    title: "Eco",
+    artist: "Elevation Worship",
+    key: "D",
+    cover: "image/68.png",
+    page: "paginas/116.html"
+  },
+  {
+    id: 149,
+    title: "Encuéntrame Otra Vez",
+    artist: "Elevation Worship",
+    key: "D",
+    cover: "image/68.png",
+    page: "paginas/117.html"
+  },
+  {
+    id: 150,
+    title: "Digno",
+    artist: "Elevation Worship",
+    key: "Cm",
+    cover: "image/68.png",
+    page: "paginas/118.html"
   }
 ];
