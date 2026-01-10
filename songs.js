@@ -77,7 +77,7 @@ const songs = [
     title: "Dios poderoso",
     artist: "IBI",
     key: "Gm",
-    cover: "image/10.jpg",
+    cover: "image/70.jpg",
     page: "paginas/10.html"
   },
   {
@@ -1114,5 +1114,53 @@ const songs = [
     key: "Cm",
     cover: "image/68.png",
     page: "paginas/118.html"
+  },
+  {
+    id: 151,
+    title: "La bendición",
+    artist: "Elevation Worship",
+    key: "B",
+    cover: "image/68.png",
+    page: "paginas/119.html"
+  },
+  {
+    id: 152,
+    title: "Ven ante su trono",
+    artist: "Elevation Worship",
+    key: "Eb",
+    cover: "image/68.png",
+    page: "paginas/120.html"
+  },
+  {
+    id: 153,
+    title: "La bondad de Dios",
+    artist: "Bethel",
+    key: "Ab",
+    cover: "image/69.jpg",
+    page: "paginas/121.html"
+  },
+  {
+    id: 154,
+    title: "Levanto un aleluya",
+    artist: "Bethel",
+    key: "Db",
+    cover: "image/69.jpg",
+    page: "paginas/122.html"
+  },
+  {
+    id: 155,
+    title: "Hay libertad",
+    artist: "IBI",
+    key: "D",
+    cover: "image/70.jpg",
+    page: "paginas/123.html"
+  },
+  {
+    id: 156,
+    title: "Todo lo que respira",
+    artist: "IBI",
+    key: "A",
+    cover: "image/70.jpg",
+    page: "paginas/124.html"
   }
 ];
