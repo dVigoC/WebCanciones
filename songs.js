@@ -92,7 +92,7 @@ const songs = [
     id: 12,
     title: "Por encima del sol",
     artist: "Jonathan & Sarah Jerez",
-    key: "F",
+    key: "G",
     cover: "image/12.jpg",
     page: "paginas/12.html"
   },
@@ -1162,5 +1162,61 @@ const songs = [
     key: "A",
     cover: "image/70.jpg",
     page: "paginas/124.html"
+  },
+  {
+    id: 157,
+    title: "Te doy gracias",
+    artist: "Jonathan & Sarah Jerez",
+    key: "Eb",
+    cover: "image/12.jpg",
+    page: "paginas/125.html"
+  },
+  {
+    id: 158,
+    title: "Gracia más grande",
+    artist: "Jonathan & Sarah Jerez",
+    key: "Bb",
+    cover: "image/12.jpg",
+    page: "paginas/126.html"
+  },
+  {
+    id: 159,
+    title: "Espera en Dios",
+    artist: "Jonathan & Sarah Jerez",
+    key: "Bb",
+    cover: "image/12.jpg",
+    page: "paginas/127.html"
+  },
+  {
+    id: 160,
+    title: "Dios ayudador, por siglos fiel",
+    artist: "Jonathan & Sarah Jerez",
+    key: "Eb",
+    cover: "image/12.jpg",
+    page: "paginas/128.html"
+  },
+  {
+    id: 161,
+    title: "Tu gloria",
+    artist: "Jonathan & Sarah Jerez",
+    key: "Bb",
+    cover: "image/12.jpg",
+    page: "paginas/129.html"
+  },
+  {
+    id: 162,
+    title: "Considera aquel",
+    artist: "Jonathan & Sarah Jerez",
+    key: "E",
+    cover: "image/12.jpg",
+    page: "paginas/130.html"
+  },
+  {
+    id: 163,
+    title: "Ciudad de Dios",
+    artist: "Jonathan & Sarah Jerez",
+    key: "Bb",
+    cover: "image/12.jpg",
+    page: "paginas/131.html"
   }
 ];

@@ -1,5 +1,5 @@
 git add .
-git commit -m "Descripción de los cambios realizados agregando paginas 11 ACTUALIZADO"
+git commit -m "actualiacion 7 paginas"
 git push
 
 BANCOCANCIONES/
