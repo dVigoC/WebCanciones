@@ -100,7 +100,7 @@ const songs = [
     id: 13,
     title: "Santo por siempre",
     artist: "Eccos",
-    key: "G",
+    key: "B",
     cover: "image/13.jpeg",
     page: "paginas/13.html"
   },
@@ -1218,5 +1218,61 @@ const songs = [
     key: "Bb",
     cover: "image/12.jpg",
     page: "paginas/131.html"
+  },
+  {
+    id: 164,
+    title: "Glorifícate",
+    artist: "Jonathan & Sarah Jerez",
+    key: "B",
+    cover: "image/71.jfif",
+    page: "paginas/132.html"
+  },
+  {
+    id: 165,
+    title: "Dios muestra su amor",
+    artist: "Jonathan & Sarah Jerez",
+    key: "G",
+    cover: "image/71.jfif",
+    page: "paginas/133.html"
+  },
+  {
+    id: 166,
+    title: "La sangre de Jesus",
+    artist: "Jonathan & Sarah Jerez",
+    key: "F#",
+    cover: "image/71.jfif",
+    page: "paginas/134.html"
+  },
+  {
+    id: 167,
+    title: "No me soltarás",
+    artist: "Rojo",
+    key: "B",
+    cover: "image/72.jfif",
+    page: "paginas/135.html"
+  },
+  {
+    id: 168,
+    title: "Solo tu",
+    artist: "Rojo",
+    key: "D",
+    cover: "image/72.jfif",
+    page: "paginas/136.html"
+  },
+  {
+    id: 169,
+    title: "Me amas igual",
+    artist: "Rojo",
+    key: "C",
+    cover: "image/72.jfif",
+    page: "paginas/137.html"
+  },
+  {
+    id: 170,
+    title: "Te quiero, te quiero",
+    artist: "Rojo",
+    key: "Gm",
+    cover: "image/72.jfif",
+    page: "paginas/138.html"
   }
 ];
